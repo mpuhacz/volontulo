@@ -12,19 +12,19 @@ from django.views.generic.list import ListView
 from apps.volontulo.models import Page
 
 
-# pylint: disable=too-many-ancestors;missing-docstring
+# pylint: disable=too-many-ancestors,missing-docstring
 class PageList(ListView):
     model = Page
     template_name = 'pages/page_list.html'
 
 
-# pylint: disable=too-many-ancestors;missing-docstring
+# pylint: disable=too-many-ancestors,missing-docstring
 class PageDetails(DetailView):
     model = Page
     template_name = 'pages/page_detail.html'
 
 
-# pylint: disable=too-many-ancestors;missing-docstring
+# pylint: disable=too-many-ancestors,missing-docstring
 class PageCreate(CreateView):
     model = Page
     fields = (
@@ -43,7 +43,7 @@ class PageCreate(CreateView):
         return redirect(self.get_success_url())
 
 
-# pylint: disable=too-many-ancestors;missing-docstring
+# pylint: disable=too-many-ancestors,missing-docstring
 class PageEdit(UpdateView):
     model = Page
     fields = (
@@ -55,7 +55,7 @@ class PageEdit(UpdateView):
     success_url = reverse_lazy('pages_list')
 
 
-# pylint: disable=too-many-ancestors;missing-docstring
+# pylint: disable=too-many-ancestors,missing-docstring
 class PageDelete(DeleteView):
     model = Page
     success_url = reverse_lazy('pages_list')
